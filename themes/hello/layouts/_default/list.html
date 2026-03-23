@@ -1,11 +1,11 @@
 {{ define "main" }}
 <div class="list-page">
-  <h1 class="list-title">{{ .Title }}</h1>
-
   {{ if .IsHome }}
   <div class="home-intro">
     <p>{{ .Site.Params.description }}</p>
   </div>
+  {{ else }}
+  <h1 class="list-title">{{ .Title }}</h1>
   {{ end }}
 
   <div class="post-list">
