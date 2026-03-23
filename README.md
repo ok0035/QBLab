@@ -2,7 +2,7 @@
   <img src="https://ok0035.github.io/QLab/logo.png" width="80" />
 </p>
 
-<h1 align="center">큐비 — 자동매매 시스템의 시장 분석</h1>
+<h1 align="center">큐비랩 — 자동매매 시스템의 시장 분석</h1>
 
 <p align="center">
   자동매매 시스템을 직접 개발하고 운용하며, 비트코인 시장 분석과 트레이딩 인사이트를 공유합니다.
@@ -56,4 +56,4 @@
 
 ---
 
-© 2026 큐비. All rights reserved.
+© 2026 큐비랩. All rights reserved.
