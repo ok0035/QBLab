@@ -1,11 +1,11 @@
 baseURL = 'https://ok0035.github.io/QLab/'
 languageCode = 'ko'
-title = '큐랩 — 자동매매 시스템의 시장 분석'
+title = '큐비로그 — 자동매매 시스템의 시장 분석'
 theme = 'hello'
 paginate = 10
 
 [params]
-  author = '큐랩'
+  author = '큐비로그'
   description = '자동매매 시스템을 직접 개발하고 운용하며, 비트코인 시장 분석과 트레이딩 인사이트를 공유합니다.'
   ShowReadingTime = true
   ShowShareButtons = true
@@ -17,7 +17,7 @@ paginate = 10
   DateFormat = '2006-01-02'
 
   [params.homeInfoParams]
-    Title = '큐랩 데일리 브리핑'
+    Title = '큐비로그 데일리 브리핑'
     Content = '자동매매 시스템을 직접 개발하고 운용하며, 비트코인 시장 분석과 트레이딩 인사이트를 공유합니다.'
 
   [[params.socialIcons]]
@@ -65,4 +65,4 @@ paginate = 10
   favicon = '/favicon.ico'
 
 [params.footer]
-  copyright = '© 2026 큐랩. All rights reserved.'
+  copyright = '© 2026 큐비로그. All rights reserved.'
