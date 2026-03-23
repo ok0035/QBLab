@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://ok0035.github.io/QLab/logo.png" width="80" />
+  <img src="https://ok0035.github.io/QLab/apple-touch-icon.png" width="80" />
 </p>
 
 <h1 align="center">큐비랩 — 자동매매 시스템의 시장 분석</h1>
