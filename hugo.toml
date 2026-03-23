@@ -47,9 +47,14 @@ paginate = 10
   weight = 2
 
 [[menus.main]]
+  name = '소개'
+  url = '/about/'
+  weight = 3
+
+[[menus.main]]
   name = '태그'
   url = '/tags/'
-  weight = 3
+  weight = 4
 
 [params.assets]
   favicon = '/favicon.ico'
