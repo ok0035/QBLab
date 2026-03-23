@@ -1,4 +1,4 @@
-baseURL = 'https://ok0035.github.io/QBLab/'
+baseURL = 'https://qblab.kr/'
 languageCode = 'ko'
 title = '큐비랩 — 자동매매 시스템의 시장 분석'
 theme = 'hello'
