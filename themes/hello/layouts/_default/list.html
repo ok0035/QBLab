@@ -12,6 +12,23 @@
     {{ range .Paginator.Pages }}
     <article class="post-item">
       <a href="{{ .Permalink }}" class="post-link">
+        {{/* 썸네일: cover → 본문 첫 이미지 → 없으면 숨김 */}}
+        {{ if .Params.cover }}
+        <div class="post-thumb">
+          <img src="{{ .Params.cover | relURL }}" alt="" loading="lazy">
+        </div>
+        {{ else }}
+          {{ $imgs := findRE `<img[^>]+src="([^"]+)"` .Content 1 }}
+          {{ with $imgs }}
+          {{ $src := index . 0 }}
+          {{ $src = index (findRE `src="([^"]+)"` $src 1) 0 }}
+          {{ $src = strings.TrimPrefix `src="` $src }}
+          {{ $src = strings.TrimSuffix `"` $src }}
+          <div class="post-thumb">
+            <img src="{{ $src }}" alt="" loading="lazy">
+          </div>
+          {{ end }}
+        {{ end }}
         <div class="post-meta">
           <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
 
