@@ -4,7 +4,7 @@ date: 2026-03-26
 tags: ["숏 보유", "비트코인", "BTC", "시장분석", "자동매매", "데일리브리핑", "바이낸스", "하락장", "금리인상", "공포탐욕지수", "극단적공포", "ETF", "온체인", "웨일"]
 description: "금리인상 우려가 부상하는 가운데 비트코인은 $71K에서 방향을 탐색 중이다. 공포탐욕지수 극단적 공포 46일 연속, 시스템은 하락 방향에 베팅하고 있다."
 author: "큐비랩"
-cover: "/images/posts/260326-dashboard.png"
+cover: "/images/posts/260326-dashboard.svg"
 draft: false
 ---
 

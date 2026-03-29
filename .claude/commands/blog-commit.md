@@ -80,7 +80,6 @@ git diff
 
 ```bash
 python scripts/generate_dashboard.py \
-  --date "2026. 03. 27" \
   --price '$69,000' \
   --change="-2.5%" \
   --position NEUTRAL \
@@ -88,10 +87,11 @@ python scripts/generate_dashboard.py \
   --output static/images/posts/260327-dashboard.png
 ```
 
-**--change 형식 규칙:**
-- 반드시 `+N.N%` 또는 `-N.N%` 형식을 사용한다
-- 하락일 때는 반드시 `-` 부호를 붙인다
-- `--change` 옵션에 음수를 전달할 때는 `--change="-2.5%"` 형식(= 사용)으로 전달한다
+**파라미터 규칙:**
+- `--change`: 반드시 `+N.N%` 또는 `-N.N%` 형식. 음수는 `--change="-2.5%"` 형식(= 사용)
+- `--position`: LONG, SHORT, NEUTRAL (한글도 가능: 롱, 숏, 관망)
+- 이미지에 날짜/URL은 표시하지 않음 (--date 파라미터 없음)
+- 하단 표시: "포지션 — 롱/숏/없음", "공포지수 — N"
 
 ### 재생성 후
 - 생성된 이미지를 Read 도구로 열어 올바르게 렌더링되었는지 반드시 확인한다

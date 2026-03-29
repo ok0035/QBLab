@@ -4,7 +4,7 @@ date: 2026-03-23
 tags: ["관망", "비트코인", "BTC", "시장분석", "자동매매", "데일리브리핑", "하락장", "FOMC", "금리동결", "유가", "웨일", "온체인", "ETF", "바이낸스"]
 description: "연준의 매파적 금리 동결과 중동발 유가 급등이 겹치며 비트코인이 6거래일 연속 하락했다. 그러나 온체인에서는 13년 만에 최대 규모의 웨일 축적이 진행 중이다."
 author: "큐비랩"
-cover: "/images/posts/260323-dashboard.png"
+cover: "/images/posts/260323-dashboard.svg"
 draft: false
 ---
 

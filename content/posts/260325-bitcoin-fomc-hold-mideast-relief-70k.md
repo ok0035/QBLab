@@ -4,7 +4,7 @@ date: 2026-03-25
 tags: ["숏 매수", "비트코인", "BTC", "시장분석", "자동매매", "데일리브리핑", "바이낸스", "하락장", "FOMC", "금리동결", "중동", "공포탐욕지수", "ETF", "웨일"]
 description: "FOMC 금리 동결과 중동 긴장 완화가 교차하는 가운데, 비트코인은 46일째 극단적 공포 구간에 머물고 있다. 시스템이 하락 방향으로 전환한 이유를 분석한다."
 author: "큐비랩"
-cover: "/images/posts/260325-dashboard.png"
+cover: "/images/posts/260325-dashboard.svg"
 draft: false
 ---
 
