@@ -641,13 +641,8 @@ img {
   box-shadow: 0 4px 16px rgba(90, 109, 237, 0.08);
 }
 
-.summary-card-label {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #5a6ded;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-bottom: 0.5rem;
+.summary-card-wrapper .section-title {
+  margin-bottom: 1.25rem;
 }
 
 .summary-card-stat {

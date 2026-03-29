@@ -47,7 +47,7 @@ paginate = 10
   weight = 2
 
 [[menus.main]]
-  name = '실매매내역'
+  name = '매매내역'
   url = '/trades/'
   weight = 3
 

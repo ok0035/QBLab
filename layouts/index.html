@@ -9,20 +9,24 @@
 <section class="home-section">
   <div class="summary-grid">
     {{ with index (where .Site.RegularPages "Section" "about") 0 }}
-    <a href="{{ .RelPermalink }}" class="summary-card">
-      <span class="summary-card-label">소개</span>
-      <p class="summary-card-stat">5년 백테스트 · 승률 79% · MDD 27%</p>
-      <p class="summary-card-desc">{{ .Description }}</p>
-      <span class="summary-card-link">자세히 보기 &rarr;</span>
-    </a>
+    <div class="summary-card-wrapper">
+      <h2 class="section-title">소개</h2>
+      <a href="{{ .RelPermalink }}" class="summary-card">
+        <p class="summary-card-stat">5년 백테스트 · 승률 79% · MDD 27%</p>
+        <p class="summary-card-desc">{{ .Description }}</p>
+        <span class="summary-card-link">자세히 보기 &rarr;</span>
+      </a>
+    </div>
     {{ end }}
     {{ with index (where .Site.RegularPages "Section" "trades") 0 }}
-    <a href="{{ .RelPermalink }}" class="summary-card">
-      <span class="summary-card-label">실매매내역</span>
-      <p class="summary-card-stat">2026년 선물 거래 · 승률 86% · 누적 +18.27%</p>
-      <p class="summary-card-desc">{{ .Description }}</p>
-      <span class="summary-card-link">자세히 보기 &rarr;</span>
-    </a>
+    <div class="summary-card-wrapper">
+      <h2 class="section-title">매매내역</h2>
+      <a href="{{ .RelPermalink }}" class="summary-card">
+        <p class="summary-card-stat">2026년 선물 거래 · 승률 86% · 누적 +18.27%</p>
+        <p class="summary-card-desc">{{ .Description }}</p>
+        <span class="summary-card-link">자세히 보기 &rarr;</span>
+      </a>
+    </div>
     {{ end }}
   </div>
 </section>
