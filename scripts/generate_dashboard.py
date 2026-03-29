@@ -9,11 +9,46 @@ Usage:
 
 import argparse
 import os
+import re
+import sys
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch
 from matplotlib.font_manager import FontProperties
 
 plt.rcParams['axes.unicode_minus'] = False
+
+
+def _normalize_change(raw: str) -> tuple[str, bool]:
+    """변동률 입력을 정규화한다.
+
+    허용 입력: "+4.4%", "-2.5%", "+4.4", "-2.5", "up4.4", "down2.5" 등
+    반환: (표시 문자열 예: "+4.4%", 상승 여부 bool)
+    """
+    s = raw.strip().lstrip("\\")
+
+    # "up/down" 접두어 → 부호로 변환
+    m = re.match(r'(?i)(up|down)\s*([0-9.]+)\s*(%)?$', s)
+    if m:
+        sign = '+' if m.group(1).lower() == 'up' else '-'
+        num = m.group(2)
+        return f"{sign}{num}%", sign == '+'
+
+    # "+/-" 부호 시작
+    m = re.match(r'([+-])\s*([0-9.]+)\s*(%)?$', s)
+    if m:
+        sign = m.group(1)
+        num = m.group(2)
+        return f"{sign}{num}%", sign == '+'
+
+    # 부호 없이 숫자만 (예: "4.4%", "2.5")
+    m = re.match(r'([0-9.]+)\s*(%)?$', s)
+    if m:
+        num = m.group(1)
+        return f"+{num}%", True
+
+    print(f"오류: 변동률 형식을 인식할 수 없습니다: '{raw}'", file=sys.stderr)
+    print("  허용 형식: '+4.4%', '-2.5%', 'up4.4', 'down2.5'", file=sys.stderr)
+    sys.exit(1)
 
 
 def generate_dashboard(date_str, btc_price, btc_change, position, fear_greed, output_path):
@@ -24,9 +59,7 @@ def generate_dashboard(date_str, btc_price, btc_change, position, fear_greed, ou
     fp_regular = FontProperties(family='Pretendard', weight='regular')
 
     # === 파생 값 ===
-    clean_change = btc_change.lstrip("\\")
-    btc_change = clean_change
-    btc_change_positive = not clean_change.startswith("-")
+    btc_change, btc_change_positive = _normalize_change(btc_change)
     pos_upper = position.upper()
     is_long = pos_upper in ("LONG", "롱", "롱 매수")
     is_short = pos_upper in ("SHORT", "숏", "숏 매수")
