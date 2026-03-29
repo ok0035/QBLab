@@ -82,8 +82,8 @@ def generate_dashboard(btc_price, btc_change, position, fear_greed, output_path)
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Maru+Buri:wght@400;700&amp;display=swap');
-      text {{ font-family: 'Maru Buri', 'MaruBuri', serif; }}
+      @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+      text {{ font-family: 'Pretendard', sans-serif; }}
     </style>
   </defs>
 
@@ -147,9 +147,9 @@ def generate_dashboard(btc_price, btc_change, position, fear_greed, output_path)
         FONT_DIR = os.path.expanduser("~/Library/Fonts")
         img = Image.new("RGB", (W * 2, H * 2), "#FFFFFF")
         draw = ImageDraw.Draw(img)
-        fp_bold = ImageFont.truetype(os.path.join(FONT_DIR, "MaruBuri-Bold.ttf"), 320)
-        fp_change = ImageFont.truetype(os.path.join(FONT_DIR, "MaruBuri-SemiBold.ttf"), 160)
-        fp_bottom = ImageFont.truetype(os.path.join(FONT_DIR, "MaruBuri-Bold.ttf"), 144)
+        fp_bold = ImageFont.truetype(os.path.join(FONT_DIR, "Pretendard-Bold.otf"), 320)
+        fp_change = ImageFont.truetype(os.path.join(FONT_DIR, "Pretendard-SemiBold.otf"), 160)
+        fp_bottom = ImageFont.truetype(os.path.join(FONT_DIR, "Pretendard-Bold.otf"), 144)
 
         def cx(text, font):
             bb = draw.textbbox((0, 0), text, font=font)

@@ -491,16 +491,19 @@ img {
   pointer-events: none;
 }
 
-/* --- Homepage Layout (wider) --- */
-.is-home .site-main {
+/* --- Wide Layout (homepage + posts list) --- */
+.is-home .site-main,
+.is-wide .site-main {
   max-width: 1080px;
 }
 
-.is-home .header-inner {
+.is-home .header-inner,
+.is-wide .header-inner {
   max-width: 1080px;
 }
 
-.is-home .footer-inner {
+.is-home .footer-inner,
+.is-wide .footer-inner {
   max-width: 1080px;
 }
 

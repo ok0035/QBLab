@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 945" width="1800" height="945">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Maru+Buri:wght@400;700&amp;display=swap');
-      text { font-family: 'Maru Buri', 'MaruBuri', serif; }
+      @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+      text { font-family: 'Pretendard', sans-serif; }
     </style>
   </defs>
 
